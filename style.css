@@ -1,0 +1,219 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
+  }
+  html { height: 101%; } /* always display scrollbars */
+  body { font-size: 62.5%; line-height: 1; font-family: Arial, Tahoma, Verdana, sans-serif; }
+  
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+  ol, ul { list-style: none; }
+  
+  blockquote, q { quotes: none; }
+  blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+  strong { font-weight: bold; } 
+  
+  input { outline: none; }
+  
+  table { border-collapse: collapse; border-spacing: 0; }
+  img { border: 0; max-width: 100%; }
+  
+  a { text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+.root {
+  background:   linear-gradient(90deg,#f0ebd9,#ede6d0,#decece,#866a88);
+}
+
+.header {
+    border:1px solid red;
+    max-width:100%;
+    height:100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+
+}
+.logo {
+    position: relative;
+max-width: 200px;
+padding-left: 170px;
+border-radius: 50%;
+
+-webkit-transition: -webkit-transform .8s ease-in-out;
+        transition:         transform .8s ease-in-out;
+}
+
+.logo:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+
+}
+
+.nav__bar {
+    border: 1px green solid;
+    max-width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-left: 235px;
+    
+}
+
+.nav__item {
+    padding-left: 100px;
+    align-self: center;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgb(red, green, blue);
+}
+
+.main {
+    border: 1px solid black;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.desc {
+border: 1px solid red;
+height: 500px;
+width: 600px;
+position: relative;
+left: 150px;
+font-family: "Roboto";
+}
+
+.title {
+font-weight: 900;
+font-size: 30px;
+text-align: center;
+margin-top: 20px;
+border: 1px solid red;
+line-height: 5rem;
+
+
+}
+
+.subtitle {
+    border: 1px solid red;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 520;
+    line-height: 25px;
+    text-align: justify;
+    text-indent: 25px;
+    font-family: "roboto";
+    
+}
+
+.photo__nina {
+ margin-left: 280px;
+ width: 500px;
+height: 500px;
+top: 30px;
+position: relative;
+}
+
+.lessons {
+   border:2px solid black;
+   width: 1250px;
+   height: 100%;
+   margin: 0 auto;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 48px;
+  
+
+}
+
+.photo__child{
+position: relative;
+box-shadow: 0px 0px 15px 10px rgb(212, 197, 197);
+border-radius: 40px;
+width: 85%;
+margin: 0 auto;
+top: 50px;
+}
+
+.points {
+    border: 1px solid red;
+   
+    font-size: 25px;
+    font-weight: 520;
+    line-height: 45px;
+    text-align: justify;
+    text-indent: 25px;
+    font-family: "roboto";
+    text-shadow: #866a88 2px 2px 4px;
+}
+
+.my__lessons{
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid red;
+    text-shadow: #866a88 2px 2px 4px;
+}
+
+.online__lessons{
+    border: 1px solid red;
+    width: 1250px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+
+.photo__online-lessons {
+    width: 45%;
+    height: 46%;
+    box-shadow: 0px 0px 15px 10px rgb(197, 182, 182);
+    border-radius: 40px;
+
+  
+}
+
+.description__online-lessons {
+    border: 1px solid red;
+    margin-top: 60px;
+    font-size: 25px;
+    font-weight: 520;
+    line-height: 45px;
+    text-align: justify;
+    text-indent: 25px;
+    font-family: "roboto";
+    text-shadow: #866a88 2px 2px 4px;
+    padding-right: 40px;
+}
+
+.scale {
+    transition: 1s; /* Время эффекта */
+   }
+   .scale:hover {
+    transform: scale(1.1); /* Увеличиваем масштаб */
+   }
+
+
+
