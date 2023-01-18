@@ -10,27 +10,35 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
-<body class="root">
+<body class="animated bounce">
+  
   <header class="header">
     <div class="logo ">
       <img src="./img/logo2.png " alt="logo">
     </div>
     <nav class="nav__bar">
-      <a href="" class="nav__item scale">Моя история</a>
-      <a href="" class="nav__item scale">Уроки</a>
-      <a href="" class="nav__item scale">Стоимость</a>
+      <a href="#mylessons" class="nav__item scale">Моя история</a>
+      <a href="#les" class="nav__item scale">Уроки</a>
+      <a href="#prise" class="nav__item scale">Стоимость</a>
       <a href="" class="nav__item scale">Отзывы</a>
     </nav>
+    
 
   </header>
 
   <main class="main">
-    <div class="desc">
-      <h1 class="title">Привет! Меня зовут Нина Фирстова.<br>Я преподаватель музыки для детей.</h1>
+    <div class="desc" id="mylessons">
+      <h1 class="title animate__fadeInDown">Привет! Меня зовут Нина Фирстова.<br>Я преподаватель музыки для детей.</h1>
       <p class="subtitle"> Музыка - универсальный способ общения, который точнее всего способен передать все чувства и
         переживания человека. Занятия с детьми я провожу в игровой форме. С помощью образов и знакомых ребёнку вещей, я
         объясняю то, что кажется непонятным в школе и отбивает интерес. На моих уроках Ваш ребёнок никогда не будет
@@ -39,27 +47,48 @@
         Telegram и т. п. Мои ученики занимают призовые места на конкурсах,
         а также показывают отличные результаты на экзаменах по сольфеджио.</p>
 
-      <button class="button"></button>
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <h2>Thank you for your purchase!</h2>
+            <p>Please enter your information:</p>
+            <form>
+              <label for="first-name">First Name:</label>
+              <input type="text" id="first-name" name="first-name" required>
+              <br>
+              <label for="last-name">Last Name:</label>
+              <input type="text" id="last-name" name="last-name" required>
+              <br>
+              <label for="phone">Phone:</label>
+              <input type="tel" id="phone" name="phone" required>
+              <br>
+              <button type="submit" class="submit-button">Submit</button>
+              <button type="button" class="close-button">Close</button>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Add the "Buy" button -->
+        <button class="buy-button">Начать учиться!</button>
     </div>
     <div class="photo__nina ">
       <img src="./img/nina.png">
     </div>
 
-    <article class="lessons">
+    <article class="lessons" >
       <img src="./img/child.jpg" class="photo__child scale">
-      <div class="info__lessons">
-        <h2 class="my__lessons">Мои уроки подойдут тем, кто хочет, чтобы его ребёнок:</h2>
+      <div class="info__lessons" id="les">
+        <h2 class="my__lessons">Мои уроки подойдут тем, кто хочет, чтобы его ребёнок :</h2>
         <p class="points ">
-          <br>✅️ -Улучшил свою речь
-          <br> ✅️ -Развивал оба полушария мозга
-          <br>✅️ -Поставил голос
-          <br>✅️ -Улучшил музыкальный слух, чувство ритма и <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;мелкую
+          <br>✅️ - Улучшил свою речь
+          <br> ✅️ - Развивал оба полушария мозга
+          <br>✅️ - Поставил голос
+          <br>✅️ - Улучшил музыкальный слух, чувство ритма и <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;мелкую
           моторику
-          <br>✅️ -Научился чётко формулировать свои мысли и желания
-          <br>✅️ -Полюбил музыку
-          <br>✅️ -Захотел и дальше развиваться в этой сфере
-          <br>✅️ -Весело и с пользой проводил время
-          <br>✅️ -Пел весёлые песенки и радовал ими вас.
+          <br>✅️ - Научился чётко формулировать свои мысли и желания
+          <br>✅️ - Полюбил музыку
+          <br>✅️ - Захотел и дальше развиваться в этой сфере
+          <br>✅️ - Весело и с пользой проводил время
+          <br>✅️ - Пел весёлые песенки и радовал ими вас.
         </p>
       </div>
     </article>
@@ -76,11 +105,71 @@
 
     </section>
 
+  
+
+    <div class="feedback-slider">
+      <div class="feedback-slider__bar"></div>
+      <div class="feedback-slider__options">
+        <div class="feedback-slider__option feedback-slider__option--1">1</div>
+        <div class="feedback-slider__option feedback-slider__option--2">2</div>
+        <div class="feedback-slider__option feedback-slider__option--3">3</div>
+        <div class="feedback-slider__option feedback-slider__option--4">4</div>
+        <div class="feedback-slider__option feedback-slider__option--5">5</div>
+      </div>
+    </div>
+
+
+      <div class="prise" id="prise">
+
+        <h1 class="welcome-message">Стоимость обучения</h1>
+        <p class="featured-items-header"></p>
+        <ul class="featured-items-list">
+          <li class="featured-item">
+            <img src="./img/joyful-kids-with-tablet.jpg" alt="Базовый" class="featured-item-image">
+            <h2 class="featured-item-name">Базовый</h2>
+            <p class="featured-item-price">1300р.</p>
+            <button class="add-to-cart-button">Подключить</button>
+          </li>
+          <li class="featured-item">
+            <img src="./img/girl-looking-at-pink-laptop.jpg" alt="Стандарт" class="featured-item-image">
+            <h2 class="featured-item-name">Стандарт</h2>
+            <p class="featured-item-price">1700р.</p>
+            <button class="add-to-cart-button">Подключить</button>
+          </li>
+          <li class="featured-item">
+            <img src="./img/a-front-view-blonde-smiling-boy-in-white-t-shirt-holding-pink-note-on-the-flower-made-stand-on-the-yellow-desk.jpg" alt="Премиум" class="featured-item-image">
+            <h2 class="featured-item-name">Премиум</h2>
+            <p class="featured-item-price">2300р.</p>
+            <button class="add-to-cart-button">Подключить</button>
+          </li>
+        </ul>
+      </div>
+
+   
+
+
+
+ 
+
   </main>
+  <footer>
+    <div class="container">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <p class="copyright">&copy; 2023 Firstov</p>
+      <div class="social-icons">
+        <a href=" https://www.facebook.com/profile.php?id=100028219410794"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/nina_music_teacher/"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
 
 
-
-<script src="./script.js"></script>
+<script src="app.js"></script>
 </body>
 
 </html>

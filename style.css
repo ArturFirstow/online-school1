@@ -1,3 +1,6 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -8,7 +11,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     outline: none;
   }
   html { height: 101%; } /* always display scrollbars */
-  body { font-size: 62.5%; line-height: 1; font-family: Arial, Tahoma, Verdana, sans-serif; }
+  body { font-size: 62.5%; line-height: 1; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ,  }
   
   article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
   ol, ul { list-style: none; }
@@ -27,10 +30,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 .root {
   background:   linear-gradient(90deg,#f0ebd9,#ede6d0,#decece,#866a88);
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
-    border:1px solid red;
+    
     max-width:100%;
     height:100%;
     margin: 0 auto;
@@ -57,7 +62,7 @@ border-radius: 50%;
 }
 
 .nav__bar {
-    border: 1px green solid;
+    
     max-width: 100%;
     height: 50px;
     margin: 0 auto;
@@ -66,6 +71,10 @@ border-radius: 50%;
     flex-direction: row;
     position: relative;
     margin-left: 235px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     
 }
 
@@ -73,28 +82,30 @@ border-radius: 50%;
     padding-left: 100px;
     align-self: center;
     font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
+
     font-size: 20px;
-    color: rgb(red, green, blue);
+    color: darkblue;
+    text-decoration: none;
 }
 
 .main {
-    border: 1px solid black;
+    
     position: relative;
     max-width: 100%;
     max-height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    
 }
 
 .desc {
-border: 1px solid red;
+
 height: 500px;
 width: 600px;
 position: relative;
 left: 150px;
-font-family: "Roboto";
+
 }
 
 .title {
@@ -102,21 +113,22 @@ font-weight: 900;
 font-size: 30px;
 text-align: center;
 margin-top: 20px;
-border: 1px solid red;
+
 line-height: 5rem;
+
 
 
 }
 
 .subtitle {
-    border: 1px solid red;
+  
     margin-top: 20px;
     font-size: 16px;
     font-weight: 520;
     line-height: 25px;
     text-align: justify;
     text-indent: 25px;
-    font-family: "roboto";
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     
 }
 
@@ -129,7 +141,7 @@ position: relative;
 }
 
 .lessons {
-   border:2px solid black;
+ 
    width: 1250px;
    height: 100%;
    margin: 0 auto;
@@ -138,6 +150,7 @@ position: relative;
   grid-template-columns: 460px 1fr;
   grid-template-rows: 1fr;
   grid-gap: 48px;
+  
   
 
 }
@@ -152,7 +165,7 @@ top: 50px;
 }
 
 .points {
-    border: 1px solid red;
+    
    
     font-size: 25px;
     font-weight: 520;
@@ -160,7 +173,7 @@ top: 50px;
     text-align: justify;
     text-indent: 25px;
     font-family: "roboto";
-    text-shadow: #866a88 2px 2px 4px;
+  
 }
 
 .my__lessons{
@@ -168,21 +181,22 @@ top: 50px;
     font-size: 30px;
     text-align: center;
     margin-top: 20px;
-    border: 1px solid red;
-    text-shadow: #866a88 2px 2px 4px;
+   
 }
 
 .online__lessons{
-    border: 1px solid red;
+ 
     width: 1250px;
     height: 100%;
     position: relative;
     margin: 0 auto;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: end;
     margin-top: 100px;
     margin-bottom: 100px;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 
@@ -196,16 +210,19 @@ top: 50px;
 }
 
 .description__online-lessons {
-    border: 1px solid red;
-    margin-top: 60px;
+    
+    margin-top: 80px;
     font-size: 25px;
     font-weight: 520;
     line-height: 45px;
     text-align: justify;
     text-indent: 25px;
     font-family: "roboto";
-    text-shadow: #866a88 2px 2px 4px;
+  
     padding-right: 40px;
+    display: flex;
+    flex-direction: row;
+   
 }
 
 .scale {
@@ -217,3 +234,348 @@ top: 50px;
 
 
 
+ 
+  
+
+  
+  .container {
+    width: 80%;
+    display: flex;
+  
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  
+  .slide {
+    height: 60vh;
+    border-radius: 20px;
+    margin: 10px;
+    cursor: pointer;
+    color: #fff;
+    flex: 2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  position: relative;
+  transition: all 500ms ease-out;
+ 
+  }
+  
+  .slide h3 {
+    position: absolute;
+    font-size: 24px;
+    bottom:  20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+  }
+  
+  .slide.active {
+    flex: 3;
+  }
+  
+  .slide.active h3 {
+    opacity: 1;
+    transition: opacity 0.4s ease-in 0.6s ;
+  }
+
+  .btn {
+    background: #e8cb8a;
+    border-radius: 50px;
+    min-width: initial;
+    text-align: center;
+    padding: 10px 14px;
+    box-shadow: 3px;
+    margin-left: 40%;
+  }
+  
+
+  .buy-button {
+    display: block;
+    width: 150px;
+    height: 40px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 5px;
+    background-color: darkblue;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .buy-button:hover {
+    background-color: rgb(70, 225, 65);
+  }
+
+
+/* Style the pop-up */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 320px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Style the form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+/* Style the labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Style the input fields */
+input[type="text"],
+input[type="tel"] {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.submit-button {
+  display: block;
+  width: 100px;
+  height: 40px;
+  margin: 20px auto;
+  border: none;
+  border-radius: 5px;
+  background-color: lightgreen;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: green;
+}
+
+/* Style the "Close" button */
+.close-button {
+  display: block;
+  width: 100px;
+  height: 40px;
+  margin: 20px auto;
+  border: none;
+  border-radius: 5px;
+  background-color: lightgray;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: gray;
+}
+
+/* Set the font for the entire page */
+
+/* Style the welcome message */
+.welcome-message {
+  font-size: 36px;
+  color: darkblue;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style the header for the featured items */
+.featured-items-header {
+  font-size: 24px;
+  color: darkblue;
+  margin-bottom: 10px;
+}
+
+/* Style the list of featured items */
+.featured-items-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Style the individual featured items */
+.featured-item {
+  width: 300px;
+  margin: 10px;
+  text-align: center;
+}
+
+/* Style the images of the featured items */
+.featured-item-image {
+  width: 100%;
+  height: auto;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+/* Style the names of the featured items */
+.featured-item-name {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* Style the prices of the featured items */
+.featured-item-price {
+  font-size: 18px;
+  color: darkred;
+  margin-bottom: 10px;
+}
+
+/* Style the "Add to Cart" buttons */
+.add-to-cart-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: darkblue;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+  background-color:darkgreen;
+}
+
+.prise {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+}
+
+.nav li {
+  margin-right: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.copyright {
+  margin: 0;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: lightgray;
+}
+
+.feedback-slider {
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+
+.feedback-slider__bar {
+  width: 20%;
+  height: 4px;
+  background-color: #333;
+  position: absolute;
+  bottom: 0;
+  transition: width 0.2s ease-in-out;
+}
+
+.feedback-slider__options {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.feedback-slider__option {
+  width: 20%;
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+}
+.feedback-slider__option:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.feedback-slider__option:hover:before {
+  background-color: #333;
+}
+
+.feedback-slider__option:active {
+  color: #fff;
+}
