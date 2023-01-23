@@ -1,25 +1,5 @@
 
-function slidesPlugin(activeSlide = 0) {
-    const slides = document.querySelectorAll('.slide')
 
-slides[activeSlide].classList.add('active')
-
-for(const slide of slides) {
-    slide.addEventListener('click', ()=> {
-        clearActiveClases()
-
-        slide.classList.add('active')
-    })
-}
-
-function clearActiveClases() {
-    slides.forEach((slide) => {
-        slide.classList.remove('active')
-    })
-}
-}
-
-slidesPlugin(4)
 
 const buyButton = document.querySelector('.buy-button');
 const popup = document.getElementById('popup');
@@ -83,5 +63,43 @@ const options = document.querySelectorAll('.feedback-slider__option');
 options.forEach((option, index) => {
   option.addEventListener('click', () => {
     bar.style.width = `${(index + 1) * 20}%`;
+  });
+});
+
+const links = document.querySelectorAll('.nav__item');
+
+links.forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+        const href = link.getAttribute('href');
+        const section = document.querySelector(href);
+        section.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+
+
+
+describe('Sait muzikalnih instrumentov', () => {
+  beforeEach(() => {
+      cy.visit('https://kakoytomoysait');
+  });
+
+  it('correct title', () => {
+      cy.title().should('include', 'Music instruments');
+  });
+
+  it('search bar', () => {
+      cy.get('input[name="search"]').should('exist');
+  });
+
+  it('should show search results when a search is made', () => {
+      cy.get('input[name="search"]').type('Guitar');
+      cy.get('.search-results').should('exist');
+  });
+
+  it('should navigate to the product page when a product is clicked', () => {
+      cy.get('.product:first-child a').click();
+      cy.url().should('include', '/product/');
   });
 });

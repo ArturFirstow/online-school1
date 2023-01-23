@@ -28,6 +28,40 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   a { text-decoration: none; }
   a:hover { text-decoration: underline; }
 
+  body {
+    font-size: 16px;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Styles for screens smaller than 600px */
+  @media (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* Styles for screens larger than 900px */
+  @media (min-width: 900px) {
+    body {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .header {
+        flex-wrap: wrap;
+    }
+    .nav__bar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav__item {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 .root {
   background:   linear-gradient(90deg,#f0ebd9,#ede6d0,#decece,#866a88);
   display: flex;
@@ -35,18 +69,16 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 .header {
-    
-    max-width:100%;
-    height:100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    flex-wrap: wrap;
-
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto;
+  align-items: center;
 }
+
 .logo {
-    position: relative;
+  order: 1;
+ grid-column: 1 / 2;
+  
 max-width: 200px;
 padding-left: 170px;
 border-radius: 50%;
@@ -69,7 +101,7 @@ border-radius: 50%;
     align-self: center;
     display: flex;
     flex-direction: row;
-    position: relative;
+    order: 2;
     margin-left: 235px;
     list-style-type: none;
     display: flex;
@@ -141,25 +173,30 @@ position: relative;
 }
 
 .lessons {
- 
-   width: 1250px;
-   height: 100%;
-   margin: 0 auto;
-  margin-top: 100px;
   display: grid;
-  grid-template-columns: 460px 1fr;
-  grid-template-rows: 1fr;
-  grid-gap: 48px;
-  
-  
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  margin-top: 150px;
+}
 
+@media (max-width: 600px) {
+  .lessons {
+      grid-template-columns: 1fr;
+  }
+  .photo__child {
+      max-width: 100%;
+  }
+  .info__lessons {
+      text-align: center;
+  }
 }
 
 .photo__child{
 position: relative;
 box-shadow: 0px 0px 15px 10px rgb(212, 197, 197);
 border-radius: 40px;
-width: 85%;
+max-width: 55%;
 margin: 0 auto;
 top: 50px;
 }
@@ -180,9 +217,11 @@ top: 50px;
     font-weight: 900;
     font-size: 30px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
    
 }
+
+
 
 .online__lessons{
  
@@ -327,7 +366,7 @@ top: 50px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  height: 320px;
+  height: 350px;
   background-color: white;
   border-radius: 5px;
   padding: 20px;
